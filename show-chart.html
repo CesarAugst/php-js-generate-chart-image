@@ -35,7 +35,11 @@
             // Instantiate and draw our chart, passing in some options.
             var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
 
+            var my_div = document.getElementById('my_div');
 
+            google.visualization.events.addListener(chart, 'ready', function () {
+                my_div.innerHTML = '<img src="' + chart.getImageURI() + '">';
+            });
 
             chart.draw(data, options);
         }
@@ -45,5 +49,6 @@
 <body>
 <!--Div that will hold the pie chart-->
 <div id="chart_div"></div>
+<div id="my_div"></div>
 </body>
 </html>
