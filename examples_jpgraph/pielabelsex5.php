@@ -4,9 +4,9 @@ require_once ('../jpgraph/src/jpgraph_pie.php');
 
 // Some data and the labels
 $data   = array(19,12,4);
-$labels = array(" Site\n(%.1f%%))",
-                " TV\n(%.1f%%))",
-                "Rádio\n(%.1f%%))");
+$labels = array(" Site\n(%.1f%%)",
+                " TV\n(%.1f%%)",
+                "Rádio\n(%.1f%%)");
 
 // Create the Pie Graph.
 $graph = new PieGraph(400,450);
